@@ -74,7 +74,7 @@ namespace OOP02
         }
 
         // calculated property 
-        public decimal EstimatedCost
+        public virtual decimal EstimatedCost
         {
             get { return DeliveryFee + (Weight * 5); }
         }
