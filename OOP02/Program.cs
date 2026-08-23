@@ -4,146 +4,162 @@
     {
         static void Main(string[] args)
         {
-            #region 1. Create a DeliveryAddress struct 
-            DeliveryAddress address1 = new DeliveryAddress("New York", "Main Street", 123);
+            //#region 1. Create a DeliveryAddress struct 
+            //DeliveryAddress address1 = new DeliveryAddress("New York", "Main Street", 123);
 
-            DeliveryAddress address2 = address1;
-            address2.City = "Giza";
-            address2.Street = "Pyramids Street";
-            address2.BuildingNumber = 100;
+            //DeliveryAddress address2 = address1;
+            //address2.City = "Giza";
+            //address2.Street = "Pyramids Street";
+            //address2.BuildingNumber = 100;
 
-            Console.WriteLine("original address:");
-            Console.WriteLine(address1.GetFullAddress());
+            //Console.WriteLine("original address:");
+            //Console.WriteLine(address1.GetFullAddress());
 
-            Console.WriteLine("\nCopied Address after modification:");
-            Console.WriteLine(address2.GetFullAddress());
-            #endregion
+            //Console.WriteLine("\nCopied Address after modification:");
+            //Console.WriteLine(address2.GetFullAddress());
+            //#endregion
 
-            #region 6. In Main, build a Console Application
-            // a. Create a DeliveryCenter
-            DeliveryCenter center = new DeliveryCenter();
+            //#region 6. In Main, build a Console Application
+            //// a. Create a DeliveryCenter
+            //DeliveryCenter center = new DeliveryCenter();
 
-            // b & c. Read data for three shipments
-            for (int i = 0; i < 3; i++)
-            {
-                Console.WriteLine($"\nEnter Shipment {i + 1} Data");
+            //// b & c. Read data for three shipments
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    Console.WriteLine($"\nEnter Shipment {i + 1} Data");
 
-                // Tracking Code
-                Console.Write("Tracking Code: ");
-                string trackingCode = Console.ReadLine();
+            //    // Tracking Code
+            //    Console.Write("Tracking Code: ");
+            //    string trackingCode = Console.ReadLine();
 
-                // Description
-                Console.Write("Description: ");
-                string description = Console.ReadLine();
+            //    // Description
+            //    Console.Write("Description: ");
+            //    string description = Console.ReadLine();
 
-                // Weight
-                double weight;
-                do
-                {
-                    Console.Write("Weight: ");
-                }
-                while (!double.TryParse(Console.ReadLine(), out weight) || weight <= 0);
+            //    // Weight
+            //    double weight;
+            //    do
+            //    {
+            //        Console.Write("Weight: ");
+            //    }
+            //    while (!double.TryParse(Console.ReadLine(), out weight) || weight <= 0);
 
-                // Delivery Fee
-                double deliveryFee;
-                do
-                {
-                    Console.Write("Delivery Fee: ");
-                }
-                while (!double.TryParse(Console.ReadLine(), out deliveryFee) || deliveryFee <= 0);
+            //    // Delivery Fee
+            //    double deliveryFee;
+            //    do
+            //    {
+            //        Console.Write("Delivery Fee: ");
+            //    }
+            //    while (!double.TryParse(Console.ReadLine(), out deliveryFee) || deliveryFee <= 0);
 
-                // Destination
-                Console.Write("City: ");
-                string city = Console.ReadLine();
+            //    // Destination
+            //    Console.Write("City: ");
+            //    string city = Console.ReadLine();
 
-                Console.Write("Street: ");
-                string street = Console.ReadLine();
+            //    Console.Write("Street: ");
+            //    string street = Console.ReadLine();
 
-                int buildingNumber;
-                do
-                {
-                    Console.Write("Building Number: ");
-                }
-                while (!int.TryParse(Console.ReadLine(), out buildingNumber) ||
-                       buildingNumber <= 0);
+            //    int buildingNumber;
+            //    do
+            //    {
+            //        Console.Write("Building Number: ");
+            //    }
+            //    while (!int.TryParse(Console.ReadLine(), out buildingNumber) ||
+            //           buildingNumber <= 0);
 
-                DeliveryAddress address =
-                    new DeliveryAddress(city, street, buildingNumber);
+            //    DeliveryAddress address =
+            //        new DeliveryAddress(city, street, buildingNumber);
 
-                // Create Shipment
-                Shipment shipment = new Shipment(
-                    trackingCode,
-                    description,
-                    weight,
-                    deliveryFee,
-                    address
-                );
+            //    // Create Shipment
+            //    Shipment shipment = new Shipment(
+            //        trackingCode,
+            //        description,
+            //        weight,
+            //        deliveryFee,
+            //        address
+            //    );
 
-                // Add Shipment
-                if (center.AddShipment(shipment))
-                {
-                    Console.WriteLine("\nShipment added successfully.");
-                }
-                else
-                {
-                    Console.WriteLine("\nDelivery Center is full.");
-                }
-            }
+            //    // Add Shipment
+            //    if (center.AddShipment(shipment))
+            //    {
+            //        Console.WriteLine("\nShipment added successfully.");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("\nDelivery Center is full.");
+            //    }
+            //}
 
-            // d. Print the three shipments using integer indexer
-            Console.WriteLine("\n--- All Shipments ---");
+            //// d. Print the three shipments using integer indexer
+            //Console.WriteLine("\n--- All Shipments ---");
 
-            for (int i = 0; i < 3; i++)
-            {
-                Shipment shipment = center[i];
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    Shipment shipment = center[i];
 
-                Console.WriteLine($"--- Shipment {i + 1} ---");
-                shipment.PrintShipment();
-                Console.WriteLine();
-            }
+            //    Console.WriteLine($"--- Shipment {i + 1} ---");
+            //    shipment.PrintShipment();
+            //    Console.WriteLine();
+            //}
 
-            // e. Ask user for tracking code
-            Console.Write("\nEnter a tracking code to search: ");
-            string searchCode = Console.ReadLine();
+            //// e. Ask user for tracking code
+            //Console.Write("\nEnter a tracking code to search: ");
+            //string searchCode = Console.ReadLine();
 
-            // f. Search using string indexer
-            Shipment foundShipment = center[searchCode];
+            //// f. Search using string indexer
+            //Shipment foundShipment = center[searchCode];
 
-            // g. Print result
-            if (!string.IsNullOrWhiteSpace(foundShipment.TrackingCode))
-            {
-                Console.WriteLine(
-                    $"Shipment Found: {foundShipment.TrackingCode} - " +
-                    $"{foundShipment.Description}"
-                );
+            //// g. Print result
+            //if (!string.IsNullOrWhiteSpace(foundShipment.TrackingCode))
+            //{
+            //    Console.WriteLine(
+            //        $"Shipment Found: {foundShipment.TrackingCode} - " +
+            //        $"{foundShipment.Description}"
+            //    );
 
-                foundShipment.PrintShipment();
-            }
-            else
-            {
-                Console.WriteLine("Shipment not found.");
-            }
+            //    foundShipment.PrintShipment();
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Shipment not found.");
+            //}
 
-            // h. Demonstrate DeliveryAddress struct copy behavior
-            Console.WriteLine("\n--- Struct Copy Test ---");
+            //// h. Demonstrate DeliveryAddress struct copy behavior
+            //Console.WriteLine("\n--- Struct Copy Test ---");
 
-            DeliveryAddress originalAddress =
-                new DeliveryAddress("Cairo", "Tahrir Street", 15);
+            //DeliveryAddress originalAddress =
+            //    new DeliveryAddress("Cairo", "Tahrir Street", 15);
 
-            DeliveryAddress copiedAddress = originalAddress;
+            //DeliveryAddress copiedAddress = originalAddress;
 
-            // Modify the copy
-            copiedAddress.City = "Giza";
-            copiedAddress.Street = "Makram Ebeid Street";
-            copiedAddress.BuildingNumber = 20;
+            //// Modify the copy
+            //copiedAddress.City = "Giza";
+            //copiedAddress.Street = "Makram Ebeid Street";
+            //copiedAddress.BuildingNumber = 20;
 
-            Console.WriteLine(
-                $"Original Address: {originalAddress.GetFullAddress()}"
-            );
+            //Console.WriteLine(
+            //    $"Original Address: {originalAddress.GetFullAddress()}"
+            //);
 
-            Console.WriteLine(
-                $"Copied Address: {copiedAddress.GetFullAddress()}"
-            );
+            //Console.WriteLine(
+            //    $"Copied Address: {copiedAddress.GetFullAddress()}"
+            //);
+            //#endregion
+
+
+            #region OOP 02 -- Part 01 : Theoretical Questions
+            //a) What is the difference between a class and a struct?
+            // Answer: Classes are reference types and are allocated on the heap
+            // while structs are value types and are allocated on the stack.
+            // Classes support inheritance , while structs do not.
+            // Classes have a default constructor that initializes all fields to their default values, while structs have a default constructor that does not initialize fields.
+            //class Default Constructor Provided if none defined (implicit parameterless constructor) ,
+            //struct Default Constructor Always exists (parameterless constructor)..
+
+            //b) Why are classes more suitable than structs for large applications?
+            // Answer: Classes are more suitable for large applications because they support inheritance and polymorphism,
+            // which allow for better code organization and reusability. Additionally, classes can have complex behavior
+            // and state management, making them more appropriate for handling the complexity of large-scale applications.
             #endregion
         }
     }
