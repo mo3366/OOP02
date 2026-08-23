@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP02
 {
-    internal struct DeliveryCenter
+    internal class DeliveryCenter
     {
         #region 5. Create a DeliveryCenter struct
         private Shipment[] shipments;
