@@ -11,9 +11,10 @@ namespace OOP02
         #region 5. Create a DeliveryCenter class
         private Shipment[] shipments;
 
-        public DeliveryCenter()
+        public DeliveryCenter(string centerName)
         {
-            shipments = new Shipment[10];
+            this.centerName = centerName;
+            shipments = new Shipment[20];
         }
 
 
@@ -68,16 +69,18 @@ namespace OOP02
         }
         #endregion
 
-        public bool RemoveShipment(Shipment shipment)
+        public bool RemoveShipment(string trackingCode)
         {
             for (int i = 0; i < shipments.Length; i++)
             {
-                if (shipments[i].TrackingCode == shipment.TrackingCode)
+                if (shipments[i] != null &&
+                    shipments[i].TrackingCode == trackingCode)
                 {
                     shipments[i] = null;
                     return true;
                 }
             }
+
             return false;
         }
 
