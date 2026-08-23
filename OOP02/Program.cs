@@ -1,4 +1,6 @@
-﻿namespace OOP02
+﻿using System.Threading.Channels;
+
+namespace OOP02
 {
     internal class Program
     {
@@ -160,6 +162,23 @@
             // Answer: Classes are more suitable for large applications because they support inheritance and polymorphism,
             // which allow for better code organization and reusability. Additionally, classes can have complex behavior
             // and state management, making them more appropriate for handling the complexity of large-scale applications.
+            #endregion
+
+            #region Part 01 : Theoretical Questions - Question 2
+            //a) Which class is the parent class?
+            // Answer: shipment is the parent class
+
+            //b) Which class is the child class?
+            // Answer: ExpressShipment is the child class
+
+            //c) What members are inherited by ExpressShipment?
+            // Answer: TrackingCode (property)
+
+            //d) Why is inheritance better than duplicating the same code in multiple classes?
+            // Answer:
+            //1 Code Reusability: Avoids writing the same properties or methods repeatedly across multiple related classes.
+            //2 Maintainability: Changes made to common logic in the parent class automatically propagate to all child classes.
+            //3 Extensibility & Polymorphism: Allows creating specialized classes that build upon existing logic without modifying the base code.
             #endregion
         }
     }
