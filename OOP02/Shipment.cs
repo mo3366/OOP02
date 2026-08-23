@@ -5,27 +5,27 @@ using System.Text;
 
 namespace OOP02
 {
-    internal struct Shipment
+    internal class Shipment
     {
         #region 2.Ceate a Shipment struct
         private string trackingCode;
         private string description;
-        private double weight;
-        private double deliveryFee;
+        private decimal weight;
+        private decimal deliveryFee;
 
-        //public Shipment(string trackingCode, string description, double weight, double deliveryFee, DeliveryAddress destination)
-        //{
-        //    this.trackingCode = "";
-        //    this.description = "";
-        //    this.weight = 0;
-        //    this.deliveryFee = 0;
+        public Shipment(string trackingCode, string description, decimal weight, decimal deliveryFee, DeliveryAddress destination)
+        {
+            this.trackingCode = "";
+            this.description = "";
+            this.weight = 0;
+            this.deliveryFee = 0;
 
-        //    TrackingCode = trackingCode;
-        //    Description = description;
-        //    Weight = weight;
-        //    DeliveryFee = deliveryFee;
-        //    Destination = destination;
-        //}
+            TrackingCode = trackingCode;
+            Description = description;
+            Weight = weight;
+            DeliveryFee = deliveryFee;
+            Destination = destination;
+        }
 
         public DeliveryAddress Destination { get; set; }
 
@@ -52,7 +52,7 @@ namespace OOP02
         }
 
         // Read/Write with validation
-        public double Weight
+        public decimal Weight
         {
             get { return weight; }
             set
@@ -63,7 +63,7 @@ namespace OOP02
         }
 
         // Public getter, private setter
-        public double DeliveryFee
+        public decimal DeliveryFee
         {
             get { return deliveryFee; }
             private set
@@ -73,8 +73,8 @@ namespace OOP02
             }
         }
 
-        // calculated property - not stored --
-        public double EstimatedCost
+        // calculated property 
+        public virtual decimal EstimatedCost
         {
             get { return DeliveryFee + (Weight * 5); }
         }
@@ -95,26 +95,7 @@ namespace OOP02
 
         }
 
-        //second Constructor (chaining)
-        public Shipment(
-        string trackingCode,
-        string description,
-        double weight,
-        double deliveryFee,
-        DeliveryAddress destination)
-        {
-            this.trackingCode = "";
-            this.description = "";
-            this.weight = 0;
-            this.deliveryFee = 0;
-
-            TrackingCode = trackingCode;
-            Description = description;
-            Weight = weight;
-            DeliveryFee = deliveryFee;
-            Destination = destination;
-        }
-
+     
         #endregion
 
 
@@ -124,9 +105,13 @@ namespace OOP02
         {
             if (newFee > 0)
             {
-                DeliveryFee = (double)newFee;
+                DeliveryFee =  newFee;
             }
         }
+
+
+
+
 
         public void PrintShipment()
         {

@@ -4,14 +4,17 @@ using System.Text;
 
 namespace OOP02
 {
-    internal struct DeliveryCenter
+    internal class DeliveryCenter
     {
-        #region 5. Create a DeliveryCenter struct
+        private string centerName;
+
+        #region 5. Create a DeliveryCenter class
         private Shipment[] shipments;
 
-        public DeliveryCenter()
+        public DeliveryCenter(string centerName)
         {
-            shipments = new Shipment[10];
+            this.centerName = centerName;
+            shipments = new Shipment[20];
         }
 
 
@@ -65,5 +68,36 @@ namespace OOP02
             return false;
         }
         #endregion
+
+        public bool RemoveShipment(string trackingCode)
+        {
+            for (int i = 0; i < shipments.Length; i++)
+            {
+                if (shipments[i] != null &&
+                    shipments[i].TrackingCode == trackingCode)
+                {
+                    shipments[i] = null;
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public void PrintAllShipments()
+        {
+            Console.WriteLine("\n========================================");
+            Console.WriteLine($"Delivery Center: {centerName}");
+            Console.WriteLine("========================================");
+
+            for (int i = 0; i < shipments.Length; i++)
+            {
+                if (shipments[i] != null)
+                {
+                    shipments[i].PrintShipment();
+                    Console.WriteLine("----------------------------------------");
+                }
+            }
+        }
     }
 }
