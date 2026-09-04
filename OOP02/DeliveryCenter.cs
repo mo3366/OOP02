@@ -60,7 +60,7 @@ namespace OOP02
         {
             for (int i = 0; i < shipments.Length; i++)
             {
-                if (string.IsNullOrWhiteSpace(shipments[i].TrackingCode))
+                if (shipments[i] == null)
                 {
                     shipments[i] = shipment;
                     return true;
@@ -97,6 +97,28 @@ namespace OOP02
             }
         }
 
+
+       public void PrintTrackingStatuses()
+        {
+            foreach (ITrackable t in shipments)
+            {
+                if (t != null)
+                {
+                    Console.WriteLine(t.GetTrackingStatus());
+                }
+            }
+        }
+
+        public void PrintCalculateInsurance()
+        {
+            foreach (IInsurable i in shipments)
+            {
+                if (i != null)
+                {
+                    Console.WriteLine(i.CalculateInsurance());
+                }
+            }
+        }
 
     }
 }

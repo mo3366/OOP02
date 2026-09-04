@@ -429,24 +429,158 @@ namespace OOP02
             #endregion
 
             #region main oop03
-            //a. Create Driver
-            Driver driver = new Driver(1,  "Ahmed Mohamed",  "01000000000" );
+            //            //a. Create Driver
+            //            Driver driver = new Driver(1,  "Ahmed Mohamed",  "01000000000" );
 
-            //b. Create DeliveryCenter
+            //            //b. Create DeliveryCenter
+            //            DeliveryCenter center = new DeliveryCenter("Cairo Center");
+
+            //            //c. Assign Driver
+            //            center.Driver = driver;
+
+            //            //d/e/f. Create Shipments
+            //            StandardShipment standardShipment =
+            //    new StandardShipment(
+            //        "SH001",
+            //        "Laptop",
+            //        3,
+            //        80,
+            //        new DeliveryAddress("Cairo", "Tahrir Street", 15)
+            //    );
+
+            //            ExpressShipment expressShipment =
+            //                new ExpressShipment(
+            //                    "SH002",
+            //                    "Mobile Phone",
+            //                    2,
+            //                    60,
+            //                    new DeliveryAddress("Cairo", "Nasr Street", 20),
+            //                    30
+            //                );
+
+            //            InternationalShipment internationalShipment =
+            //                new InternationalShipment(
+            //                    "SH003",
+            //                    "Television",
+            //                    8,
+            //                    120,
+            //                    new DeliveryAddress("Cairo", "Main Street", 10),
+            //                    "Germany",
+            //                    100
+            //                );
+
+            //            //g. Add them
+            //            center.AddShipment(standardShipment);
+            //            center.AddShipment(expressShipment);
+            //            center.AddShipment(internationalShipment);
+
+            //            //h. Print All
+            //            center.PrintAllShipments();
+
+            //            //i. DeliveryHelper
+            //            Console.WriteLine("\n==========================================");
+            //            Console.WriteLine("Printing Using DeliveryHelper...");
+            //            Console.WriteLine("==========================================");
+
+            //            DeliveryHelper.PrintShipmentDetails(standardShipment);
+            //            DeliveryHelper.PrintShipmentDetails(expressShipment);
+            //            DeliveryHelper.PrintShipmentDetails(internationalShipment);
+
+            //            //j. Test UpdateWeight Overloading
+            //            Console.WriteLine("\n==========================================");
+            //            Console.WriteLine("Updating Weight...");
+            //            Console.WriteLine("==========================================");
+
+            //            Console.WriteLine($"Original Weight : {standardShipment.Weight} KG");
+
+            //            standardShipment.UpdateWeight(5);
+
+            //            Console.WriteLine($"Updated Weight : {standardShipment.Weight} KG");
+
+            //            standardShipment.UpdateWeight(5, 0.5m);
+
+            //            Console.WriteLine(
+            //                $"Updated Weight After Packing : {standardShipment.Weight} KG"
+            //            );
+
+            //            //k. Mixed Shipment[] كدا جواها ال3 انواع  
+            //            Shipment[] shipments =
+            //{
+            //    standardShipment,
+            //    expressShipment,
+            //    internationalShipment
+            //};
+
+            //            Console.WriteLine("\n==========================================");
+            //            Console.WriteLine("Printing Using Shipment[]...");
+            //            Console.WriteLine("==========================================");
+
+            //            foreach (Shipment shipment in shipments)
+            //            {
+            //                shipment.PrintShipment();
+            //                Console.WriteLine();
+            //            }
+
+            #endregion
+
+
+            #region  OOP 04 -- Part 01 : Theoretical Questions
+
+            //Q1  Abstraction
+
+            //a)  What is Abstraction in Object-Oriented Programming?
+            // Answer: Abstraction is the process of hiding the implementation details and
+            // showinmg only the essential features of an object to the user
+
+            //b)  Why is abstraction considered one of the four pillars of OOP?
+            //Answer :because it  Reduces Complexity: It allows developers to interact with classes and methods through a clean, simplified interface without needing to understand the intricate internal logic.
+            // Enhances Maintainability: Internal implementation details can be modified or refactored later without breaking the external code that relies on the class, as long as the public contract remains intact.
+            // Improves Security: It restricts direct access to sensitive internal states, exposing only what is necessary for the object to function correctly.
+            // Promotes Reusability and Extensibility: By focusing strictly on what an object does rather than how it does it, it establishes a flexible architecture that supports modular, reusable code across different parts of an application.
+
+
+            //Q2  Abstract Classes vs. Interfaces
+
+            //a)  What is the difference between an Abstract Class and an Interface?
+            //Abstract Class :Provides a blueprint with abstract and non-abstract members.
+            //Interface :Provides a contract with only method signatures (no implementation).
+
+            //b)  When would you choose an Interface instead of an Abstract Class?
+            //to enable multiple inheritance: When a class needs to inherit behavior or type definitions from multiple sources, since C# only supports single class inheritance.
+            //For unrelated classes: When you want to define a common capability or role across completely unrelated classes(e.g., IComparable, IDisposable).
+            //To define a strict contract: When you want to specify what actions a class must perform without sharing any base implementation, code, or internal state.
+            //When designing APIs and decoupled systems: Interfaces are ideal for dependency injection and loose coupling because they decouple the definition of a service from its actual implementation.
+
+            //c)  Can a class inherit from multiple abstract classes? Can it implement multiple interfaces?
+            // Abstract Classes: No, a class cannot inherit from multiple abstract classes.C# restricts classes to a single base class to prevent complexity and issues like the diamond problem.
+            //Interfaces: Yes, a class can implement multiple interfaces, separated by commas
+            #endregion
+
+            #region main oop04
+            // ==========================================
+            // Create Delivery Center
+            // ==========================================
+
             DeliveryCenter center = new DeliveryCenter("Cairo Center");
 
-            //c. Assign Driver
-            center.Driver = driver;
 
-            //d/e/f. Create Shipments
+            // ==========================================
+            // a. Create StandardShipment
+            // ==========================================
+
             StandardShipment standardShipment =
-    new StandardShipment(
-        "SH001",
-        "Laptop",
-        3,
-        80,
-        new DeliveryAddress("Cairo", "Tahrir Street", 15)
-    );
+                new StandardShipment(
+                    "SH001",
+                    "Laptop",
+                    3,
+                    80,
+                    new DeliveryAddress("Cairo", "Tahrir Street", 15)
+                );
+
+
+            // ==========================================
+            // b. Create ExpressShipment
+            // ==========================================
 
             ExpressShipment expressShipment =
                 new ExpressShipment(
@@ -458,6 +592,11 @@ namespace OOP02
                     30
                 );
 
+
+            // ==========================================
+            // c. Create InternationalShipment
+            // ==========================================
+
             InternationalShipment internationalShipment =
                 new InternationalShipment(
                     "SH003",
@@ -468,61 +607,128 @@ namespace OOP02
                     "Germany",
                     100
                 );
-            
-            //g. Add them
+
+
+            // ==========================================
+            // d. Add all shipments to DeliveryCenter
+            // ==========================================
+
             center.AddShipment(standardShipment);
             center.AddShipment(expressShipment);
             center.AddShipment(internationalShipment);
 
-            //h. Print All
+
+            // ==========================================
+            // e. Print all shipment details
+            // ==========================================
+
+            Console.WriteLine("==========================================");
+            Console.WriteLine("Delivery Center");
+            Console.WriteLine("==========================================");
+
             center.PrintAllShipments();
 
-            //i. DeliveryHelper
+
+            // ==========================================
+            // f. Print tracking status
+            // ==========================================
+
             Console.WriteLine("\n==========================================");
-            Console.WriteLine("Printing Using DeliveryHelper...");
+            Console.WriteLine("Tracking Status");
             Console.WriteLine("==========================================");
 
-            DeliveryHelper.PrintShipmentDetails(standardShipment);
-            DeliveryHelper.PrintShipmentDetails(expressShipment);
-            DeliveryHelper.PrintShipmentDetails(internationalShipment);
+            DeliveryReport.PrintShipment(standardShipment);
+            Console.WriteLine();
 
-            //j. Test UpdateWeight Overloading
+            DeliveryReport.PrintShipment(expressShipment);
+            Console.WriteLine();
+
+            DeliveryReport.PrintShipment(internationalShipment);
+
+
+            // ==========================================
+            // g. Print insurance cost
+            // ==========================================
+
             Console.WriteLine("\n==========================================");
-            Console.WriteLine("Updating Weight...");
+            Console.WriteLine("Insurance");
             Console.WriteLine("==========================================");
-
-            Console.WriteLine($"Original Weight : {standardShipment.Weight} KG");
-
-            standardShipment.UpdateWeight(5);
-
-            Console.WriteLine($"Updated Weight : {standardShipment.Weight} KG");
-
-            standardShipment.UpdateWeight(5, 0.5m);
 
             Console.WriteLine(
-                $"Updated Weight After Packing : {standardShipment.Weight} KG"
+                $"Standard Shipment Insurance : " +
+                $"{standardShipment.CalculateInsurance():0.00} EGP"
             );
 
-            //k. Mixed Shipment[] كدا جواها ال3 انواع  
-            Shipment[] shipments =
-{
-    standardShipment,
-    expressShipment,
-    internationalShipment
-};
+            Console.WriteLine();
+
+            Console.WriteLine(
+                $"Express Shipment Insurance : " +
+                $"{expressShipment.CalculateInsurance():0.00} EGP"
+            );
+
+            Console.WriteLine();
+
+            Console.WriteLine(
+                $"International Shipment Insurance : " +
+                $"{internationalShipment.CalculateInsurance():0.00} EGP"
+            );
+
+
+            // ==========================================
+            // h. ITrackable[] array
+            // ==========================================
+
+            ITrackable[] trackableShipments =
+            {
+        standardShipment,
+        expressShipment,
+        internationalShipment
+    };
 
             Console.WriteLine("\n==========================================");
-            Console.WriteLine("Printing Using Shipment[]...");
+            Console.WriteLine("ITrackable[]");
             Console.WriteLine("==========================================");
 
-            foreach (Shipment shipment in shipments)
+            foreach (ITrackable shipment in trackableShipments)
             {
-                shipment.PrintShipment();
-                Console.WriteLine();
+                Console.WriteLine(shipment.GetTrackingStatus());
             }
 
-            #endregion
 
+            // ==========================================
+            // i. IInsurable[] array
+            // ==========================================
+
+            IInsurable[] insurableShipments =
+            {
+        standardShipment,
+        expressShipment,
+        internationalShipment
+    };
+
+            Console.WriteLine("\n==========================================");
+            Console.WriteLine("IInsurable[]");
+            Console.WriteLine("==========================================");
+
+            foreach (IInsurable shipment in insurableShipments)
+            {
+                Console.WriteLine(
+                    $"Insurance: {shipment.CalculateInsurance():0.00} EGP"
+                );
+            }
+
+
+            // ==========================================
+            // Interface Polymorphism
+            // ==========================================
+
+            Console.WriteLine("\n==========================================");
+            Console.WriteLine(
+                "Interface Polymorphism Demonstrated Successfully."
+            );
+            Console.WriteLine("==========================================");
+
+            #endregion
 
         }
     }

@@ -4,21 +4,32 @@ using System.Text;
 
 namespace OOP02
 {
-    internal class StandardShipment : Shipment
+    internal class StandardShipment : Shipment, ITrackable , IInsurable
     {
         //constractor shanning from the base class constructor
         public StandardShipment(string trackingCode, string description, decimal weight, decimal deliveryFee, DeliveryAddress destination)
             : base(trackingCode, description, weight, deliveryFee, destination)
         {
         }
-    
 
-    public override decimal EstimatedCost
+
+        public override decimal EstimatedCost
         {
             get
-            {    
-                return base.EstimatedCost;
+            {
+                return DeliveryFee + (Weight * 5);
             }
+        }
+        
+        //interface implementation
+        public string GetTrackingStatus()
+        {
+            return $"Shipment {TrackingCode} is Ready.";
+        }
+
+        public decimal CalculateInsurance()
+        {
+            return EstimatedCost * 0.05m;
         }
 
         public override void PrintShipment()
