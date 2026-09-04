@@ -181,6 +181,33 @@ namespace OOP02
             //3 Extensibility & Polymorphism: Allows creating specialized classes that build upon existing logic without modifying the base code.
             #endregion
 
+            #region OOP 03 -- Part 01 : Theoretical Questions
+            //Q1 Overloading, Overriding, and Binding
+
+            //a) What is the difference between Method Overloading and Method Overriding?
+            // Answer: Method Overloading is Allows a class to have multiple methods with the same name but different Parameters..
+            // Method Overriding is Allows a derived class to provide a specific implementation of a method that is already defined in its base class
+
+            //b)  What is the difference between Static Binding and Dynamic Binding?
+            // Answer: Static Binding (also known as early binding) occurs at compile time - faster - where the method to be invoked is determined based on the reference type.
+            // Dynamic Binding (also known as late binding) occurs at runtime, where the method to be invoked is determined based on the actual object type.
+
+
+            //Q2  Sealed Classes and Methods
+
+            //a)  What is the purpose of the sealed keyword when applied to a class?
+            // Answer: A sealed class is a class that cannot be inherited. It stops the inheritance chain completely.
+
+            //b)  What is the difference between a sealed class and a sealed method?
+            // Answer: A sealed class cannot be inherited, while a sealed method can be inherited but cannot be overridden in derived classes.
+            //sealed class: A sealed class is a class that cannot be inherited. It stops the inheritance chain completely.
+            //Sealed Method: A method can be sealed inside a derived class to prevent further overriding down the chain.
+
+            //c)  Can a sealed method be overridden? Why?
+            // Answer: No, a sealed method cannot be overridden. Sealing a method prevents any further overriding in derived classes, ensuring that the implementation remains unchanged in the inheritance hierarchy.
+
+            #endregion
+
             #region 5. In Main 
             Console.Write("Enter Delivery Center Name: ");
             string centerName = Console.ReadLine();
