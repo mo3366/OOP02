@@ -5,7 +5,7 @@ using System.Text;
 
 namespace OOP02
 {
-    internal class Shipment
+    internal  abstract class Shipment
     {
         #region 2.Ceate a Shipment struct
         private string trackingCode;
