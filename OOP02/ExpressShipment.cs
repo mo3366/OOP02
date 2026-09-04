@@ -32,5 +32,16 @@ namespace OOP02
             }
         }
 
+        public override void PrintShipment()
+        {
+            Console.WriteLine("Express Shipment");
+            Console.WriteLine($"Tracking Code : {TrackingCode}");
+            Console.WriteLine($"Description : {Description}");
+            Console.WriteLine($"Weight : {Weight} KG");
+            Console.WriteLine($"Delivery Fee : {DeliveryFee} EGP");
+            Console.WriteLine($"Extra Fee : {ExtraFee} EGP");
+            Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
+        }
+
     }
 }
