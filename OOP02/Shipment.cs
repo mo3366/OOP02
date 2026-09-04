@@ -82,6 +82,7 @@ namespace OOP02
 
 
         #endregion
+
         #region 2. Add constructor overloading to Shipment
         // first Constructor 
         public Shipment(string trackingCode)
@@ -110,10 +111,25 @@ namespace OOP02
         }
 
 
+        public void UpdateWeight(decimal newWeight)
+        {
+            if (newWeight > 0)
+            {
+                Weight = newWeight;
+            }
+        }
+
+        public void UpdateWeight(decimal newWeight, decimal packingWeight)
+        {
+            if (newWeight > 0 && packingWeight > 0)
+            {
+                Weight = newWeight + packingWeight;
+            }
+        }
 
 
 
-        public void PrintShipment()
+        public virtual void PrintShipment()
         {
             Console.WriteLine("Shipment Information:");
             Console.WriteLine($"Tracking Code: {TrackingCode}");

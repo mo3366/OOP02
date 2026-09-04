@@ -40,7 +40,7 @@ namespace OOP02
         {
             get
             {
-                return DeliveryFee + (Weight * 5) + CustomsFee;
+                return base.EstimatedCost + CustomsFee;
             }
         }
 
