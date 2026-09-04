@@ -8,6 +8,8 @@ namespace OOP02
     {
         private string centerName;
 
+        public Driver Driver { get; set; }
+
         #region 5. Create a DeliveryCenter class
         private Shipment[] shipments;
 
@@ -86,18 +88,15 @@ namespace OOP02
 
         public void PrintAllShipments()
         {
-            Console.WriteLine("\n========================================");
-            Console.WriteLine($"Delivery Center: {centerName}");
-            Console.WriteLine("========================================");
-
-            for (int i = 0; i < shipments.Length; i++)
+            foreach (Shipment s in shipments)
             {
-                if (shipments[i] != null)
+                if (s != null)
                 {
-                    shipments[i].PrintShipment();
-                    Console.WriteLine("----------------------------------------");
+                    s.PrintShipment();
                 }
             }
         }
+
+
     }
 }
