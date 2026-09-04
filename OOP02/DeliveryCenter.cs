@@ -1,5 +1,4 @@
-﻿using OOP02.Interface;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -61,7 +60,7 @@ namespace OOP02
         {
             for (int i = 0; i < shipments.Length; i++)
             {
-                if (string.IsNullOrWhiteSpace(shipments[i].TrackingCode))
+                if (shipments[i] == null)
                 {
                     shipments[i] = shipment;
                     return true;
@@ -105,7 +104,7 @@ namespace OOP02
             {
                 if (t != null)
                 {
-                    t.GetTrackingStatus();
+                    Console.WriteLine(t.GetTrackingStatus());
                 }
             }
         }
@@ -116,7 +115,7 @@ namespace OOP02
             {
                 if (i != null)
                 {
-                    i.CalculateInsurance();
+                    Console.WriteLine(i.CalculateInsurance());
                 }
             }
         }
