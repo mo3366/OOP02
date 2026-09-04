@@ -524,6 +524,38 @@ namespace OOP02
             #endregion
 
 
-        }
+            #region  OOP 04 -- Part 01 : Theoretical Questions
+
+            //Q1  Abstraction
+
+            //a)  What is Abstraction in Object-Oriented Programming?
+            // Answer: Abstraction is the process of hiding the implementation details and
+            // showinmg only the essential features of an object to the user
+
+            //b)  Why is abstraction considered one of the four pillars of OOP?
+            //Answer :because it  Reduces Complexity: It allows developers to interact with classes and methods through a clean, simplified interface without needing to understand the intricate internal logic.
+            // Enhances Maintainability: Internal implementation details can be modified or refactored later without breaking the external code that relies on the class, as long as the public contract remains intact.
+            // Improves Security: It restricts direct access to sensitive internal states, exposing only what is necessary for the object to function correctly.
+            // Promotes Reusability and Extensibility: By focusing strictly on what an object does rather than how it does it, it establishes a flexible architecture that supports modular, reusable code across different parts of an application.
+
+
+            //Q2  Abstract Classes vs. Interfaces
+
+            //a)  What is the difference between an Abstract Class and an Interface?
+            //Abstract Class :Provides a blueprint with abstract and non-abstract members.
+            //Interface :Provides a contract with only method signatures (no implementation).
+
+            //b)  When would you choose an Interface instead of an Abstract Class?
+            //to enable multiple inheritance: When a class needs to inherit behavior or type definitions from multiple sources, since C# only supports single class inheritance.
+            //For unrelated classes: When you want to define a common capability or role across completely unrelated classes(e.g., IComparable, IDisposable).
+            //To define a strict contract: When you want to specify what actions a class must perform without sharing any base implementation, code, or internal state.
+            //When designing APIs and decoupled systems: Interfaces are ideal for dependency injection and loose coupling because they decouple the definition of a service from its actual implementation.
+
+            //c)  Can a class inherit from multiple abstract classes? Can it implement multiple interfaces?
+            // Abstract Classes: No, a class cannot inherit from multiple abstract classes.C# restricts classes to a single base class to prevent complexity and issues like the diamond problem.
+            //Interfaces: Yes, a class can implement multiple interfaces, separated by commas
+            #endregion
+
+    }
     }
 }
