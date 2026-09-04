@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP02
 {
-    internal class ExpressShipment : Shipment
+    internal class ExpressShipment : Shipment , ITrackable
     {
         private decimal extraFee;
 
@@ -30,6 +30,12 @@ namespace OOP02
             {
                 return DeliveryFee + (Weight * 5) + ExtraFee;
             }
+        }
+
+        //interface implementation
+        public string GetTrackingStatus()
+        {
+            return $"Shipment {TrackingCode} is Out for Delivery.";
         }
 
         public override void PrintShipment()
