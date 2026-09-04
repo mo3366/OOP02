@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OOP02.Interface;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -97,6 +98,28 @@ namespace OOP02
             }
         }
 
+
+       public void PrintTrackingStatuses()
+        {
+            foreach (ITrackable t in shipments)
+            {
+                if (t != null)
+                {
+                    t.GetTrackingStatus();
+                }
+            }
+        }
+
+        public void PrintCalculateInsurance()
+        {
+            foreach (IInsurable i in shipments)
+            {
+                if (i != null)
+                {
+                    i.CalculateInsurance();
+                }
+            }
+        }
 
     }
 }
