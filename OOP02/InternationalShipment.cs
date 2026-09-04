@@ -44,6 +44,13 @@ namespace OOP02
             }
         }
 
+        public virtual void GenerateCustomsReport()
+        {
+            Console.WriteLine(
+                $"Customs Report for {DestinationCountry}"
+            );
+        }
+
         public override void PrintShipment()
         {
             Console.WriteLine("International Shipment");
