@@ -7,11 +7,14 @@ namespace OOP02
 {
     internal  abstract class Shipment
     {
-        #region 2.Ceate a Shipment struct
+        #region 2.Ceate Shipment 
         private string trackingCode;
         private string description;
         private decimal weight;
         private decimal deliveryFee;
+
+        // Abstract EstimatedCost
+        public abstract decimal EstimatedCost { get; }
 
         public Shipment(string trackingCode, string description, decimal weight, decimal deliveryFee, DeliveryAddress destination)
         {
@@ -73,11 +76,6 @@ namespace OOP02
             }
         }
 
-        // calculated property 
-        public virtual decimal EstimatedCost
-        {
-            get { return DeliveryFee + (Weight * 5); }
-        }
 
 
 
@@ -127,18 +125,9 @@ namespace OOP02
             }
         }
 
-
-
-        public virtual void PrintShipment()
-        {
-            Console.WriteLine("Shipment Information:");
-            Console.WriteLine($"Tracking Code: {TrackingCode}");
-            Console.WriteLine($"Description: {Description}");
-            Console.WriteLine($"Weight: {Weight}");
-            Console.WriteLine($"Delivery Fee: {DeliveryFee}");
-            Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
-            Console.WriteLine($"Estimated Cost: {EstimatedCost}");
-        }
+        // Abstract PrintShipment
+        public abstract void PrintShipment();
+       
         #endregion
 
     }
