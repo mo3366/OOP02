@@ -8,6 +8,8 @@ namespace OOP02
     {
         private string centerName;
 
+        public Driver Driver { get; set; }
+
         #region 5. Create a DeliveryCenter class
         private Shipment[] shipments;
 
