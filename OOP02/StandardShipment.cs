@@ -11,13 +11,13 @@ namespace OOP02
             : base(trackingCode, description, weight, deliveryFee, destination)
         {
         }
-    
 
-    public override decimal EstimatedCost
+
+        public override decimal EstimatedCost
         {
             get
-            {    
-                return base.EstimatedCost;
+            {
+                return DeliveryFee + (Weight * 5);
             }
         }
 
