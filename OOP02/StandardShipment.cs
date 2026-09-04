@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP02
 {
-    internal class StandardShipment : Shipment, ITrackable
+    internal class StandardShipment : Shipment, ITrackable , IInsurable
     {
         //constractor shanning from the base class constructor
         public StandardShipment(string trackingCode, string description, decimal weight, decimal deliveryFee, DeliveryAddress destination)
@@ -25,6 +25,11 @@ namespace OOP02
         public string GetTrackingStatus()
         {
             return $"Shipment {TrackingCode} is Ready.";
+        }
+
+        public decimal CalculateInsurance()
+        {
+            return EstimatedCost * 0.05m;
         }
 
         public override void PrintShipment()
