@@ -158,6 +158,12 @@ namespace OOP02
             return result;
         }
 
-       
+       //static constractor
+      static Shipment()
+        {
+            TotalShipmentsCreated = 0;
+            Console.WriteLine("Shipment System Initialized");
+
+        }
     }
 }
