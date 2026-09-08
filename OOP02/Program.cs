@@ -781,6 +781,21 @@ namespace OOP02
             //d) What is a static class? Can you create an object from a static class?
             //A static class is a class that contains only static members and cannot be inherited.
             //No, you cannot instantiate a static class using the new keyword.
+
+            //-----------------------------------------------------------
+            //Q4 Extension Methods
+
+            //a) What is an Extension Method?
+            //A special kind of static method that allows you to add new methods to existing types without modifying the original source code or creating a derived class.
+
+            //b) What keyword must be used in the first parameter of an extension method?
+            //The this keyword(this string str)
+
+            //c) Where must an extension method be declared?
+            //Inside a static class as a static method.
+
+            //d) Can an extension method access private members of the class it extends?
+            //No, extension methods can only access public, internal, or protected members accessible through the type's standard public interface.
             #endregion
 
 
