@@ -140,5 +140,21 @@ namespace OOP02
             return (Shipment)this.MemberwiseClone();
         }
 
+
+        //deep copy
+        public Shipment DeepCopy()
+        {
+            Shipment result = (Shipment)this.MemberwiseClone();
+
+            result.Destination = new DeliveryAddress(
+                Destination.City,
+                Destination.Street,
+                Destination.BuildingNumber
+            );
+
+            return result;
+        }
+
+
     }
 }

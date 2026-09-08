@@ -868,6 +868,42 @@ namespace OOP02
             //                $"{ReferenceEquals(standardShipment.Destination, shallowCopy.Destination)}"
             //            );
 
+
+            //------------------------------------
+
+            //3 Deep Copy
+
+//            StandardShipment standardShipment = new StandardShipment(
+//    "SH001",
+//    "Laptop",
+//    3,
+//    80,
+//    new DeliveryAddress("Cairo", "Tahrir Street", 15)
+//);
+
+
+//            Shipment deepCopy = standardShipment.DeepCopy();
+
+//            Console.WriteLine("Original Shipment Address : " +
+//                              standardShipment.Destination.City);
+
+//            Console.WriteLine("Copied Shipment Address : " +
+//                              deepCopy.Destination.City);
+
+//            Console.WriteLine("Changing copied shipment address...");
+
+//            deepCopy.Destination.City = "Giza";
+
+//            Console.WriteLine("Original Shipment Address : " +
+//                              standardShipment.Destination.City);
+
+//            Console.WriteLine("Copied Shipment Address : " +
+//                              deepCopy.Destination.City);
+
+//            Console.WriteLine("Same DeliveryAddress Object : " +
+//                              ReferenceEquals(
+//                                  standardShipment.Destination,
+//                                  deepCopy.Destination));
             #endregion
 
 
