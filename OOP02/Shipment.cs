@@ -5,7 +5,7 @@ using System.Text;
 
 namespace OOP02
 {
-    internal  abstract class Shipment
+    internal abstract partial class Shipment
     {
         #region 2.Ceate Shipment 
         private string trackingCode;
