@@ -742,6 +742,26 @@ namespace OOP02
             //c) What is the difference between copying an object and copying its reference?
             //Answer :Copying an object creates a new instance with the same values , modifying one has no effect on the other.
             //while copying its reference only creates a new variable that points to the same object in memory ,changing data through one affects both..
+
+
+            //--------------------------------------------------------
+            //Q2 Shallow Copy vs Deep Copy
+
+            //a) What is a Shallow Copy?
+            //A copy of an object where value-type fields are copied directly, but reference-type fields only copy their memory addresses (references),
+            //meaning the original and the copy share the same nested objects.
+
+            // b) What is a Deep Copy?
+            //A complete copy where the object and all objects it references are recursively duplicated, creating entirely independent instances with no shared references.
+
+            //c) What happens to reference-type members when a Shallow Copy is created?
+            //Only their references are copied, causing both the original object and the shallow copy to point to the exact same referenced objects in heap memory.
+
+            //d) What happens to reference-type members when a Deep Copy is created?
+            //New instances of the referenced objects are created in memory, and their data is duplicated, ensuring complete isolation from the original object.
+
+            //e) Give one situation where Deep Copy would be safer than Shallow Copy.
+            //New instances of the referenced objects are created in memory, and their data is duplicated, ensuring complete isolation from the original object.
             #endregion
 
 
