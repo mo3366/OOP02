@@ -873,37 +873,44 @@ namespace OOP02
 
             //3 Deep Copy
 
-//            StandardShipment standardShipment = new StandardShipment(
-//    "SH001",
-//    "Laptop",
-//    3,
-//    80,
-//    new DeliveryAddress("Cairo", "Tahrir Street", 15)
+            //            StandardShipment standardShipment = new StandardShipment(
+            //    "SH001",
+            //    "Laptop",
+            //    3,
+            //    80,
+            //    new DeliveryAddress("Cairo", "Tahrir Street", 15)
+            //);
+
+
+            //            Shipment deepCopy = standardShipment.DeepCopy();
+
+            //            Console.WriteLine("Original Shipment Address : " +
+            //                              standardShipment.Destination.City);
+
+            //            Console.WriteLine("Copied Shipment Address : " +
+            //                              deepCopy.Destination.City);
+
+            //            Console.WriteLine("Changing copied shipment address...");
+
+            //            deepCopy.Destination.City = "Giza";
+
+            //            Console.WriteLine("Original Shipment Address : " +
+            //                              standardShipment.Destination.City);
+
+            //            Console.WriteLine("Copied Shipment Address : " +
+            //                              deepCopy.Destination.City);
+
+            //            Console.WriteLine("Same DeliveryAddress Object : " +
+            //                              ReferenceEquals(
+            //                                  standardShipment.Destination,
+            //                                  deepCopy.Destination));
+
+            //--------------------------------------
+            //Q6 — Static Method
+
+//            Console.WriteLine(
+//    $"Total Shipments Created : {Shipment.GetTotalShipmentsCreated()}"
 //);
-
-
-//            Shipment deepCopy = standardShipment.DeepCopy();
-
-//            Console.WriteLine("Original Shipment Address : " +
-//                              standardShipment.Destination.City);
-
-//            Console.WriteLine("Copied Shipment Address : " +
-//                              deepCopy.Destination.City);
-
-//            Console.WriteLine("Changing copied shipment address...");
-
-//            deepCopy.Destination.City = "Giza";
-
-//            Console.WriteLine("Original Shipment Address : " +
-//                              standardShipment.Destination.City);
-
-//            Console.WriteLine("Copied Shipment Address : " +
-//                              deepCopy.Destination.City);
-
-//            Console.WriteLine("Same DeliveryAddress Object : " +
-//                              ReferenceEquals(
-//                                  standardShipment.Destination,
-//                                  deepCopy.Destination));
             #endregion
 
 

@@ -165,5 +165,10 @@ namespace OOP02
             Console.WriteLine("Shipment System Initialized");
 
         }
+        //Static Method
+        public static int GetTotalShipmentsCreated()
+        {
+            return TotalShipmentsCreated;
+        }
     }
 }
