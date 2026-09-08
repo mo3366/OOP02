@@ -12,6 +12,7 @@ namespace OOP02
         private string description;
         private decimal weight;
         private decimal deliveryFee;
+        private static int TotalShipmentsCreated;
 
         // Abstract EstimatedCost
         public abstract decimal EstimatedCost { get; }
@@ -28,6 +29,7 @@ namespace OOP02
             Weight = weight;
             DeliveryFee = deliveryFee;
             Destination = destination;
+            TotalShipmentsCreated++;
         }
 
         public DeliveryAddress Destination { get; set; }
@@ -91,10 +93,11 @@ namespace OOP02
             this.Weight = 1;
             this.DeliveryFee = 50;
             this.Destination = new DeliveryAddress("Cairo", "Unknown Street", 1);
+            TotalShipmentsCreated++;
 
         }
 
-     
+
         #endregion
 
 
@@ -155,6 +158,6 @@ namespace OOP02
             return result;
         }
 
-
+       
     }
 }
