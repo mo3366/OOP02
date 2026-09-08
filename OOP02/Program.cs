@@ -762,6 +762,25 @@ namespace OOP02
 
             //e) Give one situation where Deep Copy would be safer than Shallow Copy.
             //New instances of the referenced objects are created in memory, and their data is duplicated, ensuring complete isolation from the original object.
+
+            //---------------------------------------------------------
+            //Q3 Static Members
+
+            //a) What is a static field, and how is it different from an instance field?
+            //A static field belongs to the class itself rather than any specific object instance, meaning a single copy is shared across all instances.
+            //An instance field is allocated separately for every individual object created.
+
+            //b) What is a static method? Can a static method directly access instance members?
+            //A static method belongs to the class rather than an instance.No, it cannot directly access instance members(fields or methods)
+            //because instance members rely on a specific object reference to exist.
+
+            //c) What is a static constructor, and when is it executed?
+            //A special constructor used to initialize static data or perform a one - time setup.It is executed automatically
+            //by the runtime before any instances of the class are created or any static members are accessed.
+
+            //d) What is a static class? Can you create an object from a static class?
+            //A static class is a class that contains only static members and cannot be inherited.
+            //No, you cannot instantiate a static class using the new keyword.
             #endregion
 
 
