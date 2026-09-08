@@ -796,6 +796,23 @@ namespace OOP02
 
             //d) Can an extension method access private members of the class it extends?
             //No, extension methods can only access public, internal, or protected members accessible through the type's standard public interface.
+
+            //-----------------------------------------------------------
+            //Q5 Partial Classes and Partial Methods
+
+            //a) What is a Partial Class?
+            //A class whose implementation is split across multiple files using the partial keyword,
+            //which the compiler combines into a single class during compilation.
+
+            //b) Why would a developer split one class into multiple files?
+            //To managment and separate auto - generated code from custom written logic, or to allow multiple
+            //programmers to work on the same large class simultaneously.
+
+            //c) What is a Partial Method?
+            //A method declared inside a partial class whose signature is defined in one part and whose implementation is optional(provided in another part).
+
+            //d) What happens if a declared partial method has no implementation?
+            //The compiler automatically removes the method declaration and all calls to it during compilation, resulting in zero performance
             #endregion
 
 
