@@ -908,9 +908,17 @@ namespace OOP02
             //--------------------------------------
             //Q6 — Static Method
 
-//            Console.WriteLine(
-//    $"Total Shipments Created : {Shipment.GetTotalShipmentsCreated()}"
-//);
+            //            Console.WriteLine(
+            //    $"Total Shipments Created : {Shipment.GetTotalShipmentsCreated()}"
+            //);
+
+            //--------------------------------------
+
+            //Q7 — DeliveryUtilities
+            //DeliveryUtilities.PrintSystemTitle();
+
+            //Console.WriteLine("Creating Shipments---");
+            //DeliveryUtilities.PrintSeparator();
             #endregion
 
 
