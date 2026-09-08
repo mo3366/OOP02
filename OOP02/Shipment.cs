@@ -119,7 +119,7 @@ namespace OOP02
 
         public void UpdateWeight(decimal newWeight, decimal packingWeight)
         {
-            if (newWeight > 0 && packingWeight > 0)
+            if (newWeight > 0 && packingWeight >= 0)
             {
                 Weight = newWeight + packingWeight;
             }

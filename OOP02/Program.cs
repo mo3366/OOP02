@@ -730,6 +730,21 @@ namespace OOP02
 
             #endregion
 
+            #region  OOP05 Part 01 — Theoretical Questions
+            //Q1 Object Copying -> 
+
+            //a) What happens when you assign one object variable to another object variable?
+            //Answer :Assigning one object variable to another does not copy the object itself. Instead, it only copies the reference (the memory address)
+
+            //b) Does assigning one object to another create a new object? Explain.
+            //Answer :No, it does not create a new object. It simply creates a new reference variable that points to the pre-existing object, leaving the total number of objects in memory unchanged.
+
+            //c) What is the difference between copying an object and copying its reference?
+            //Answer :Copying an object creates a new instance with the same values , modifying one has no effect on the other.
+            //while copying its reference only creates a new variable that points to the same object in memory ,changing data through one affects both..
+            #endregion
+
+
         }
     }
 }
