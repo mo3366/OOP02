@@ -127,8 +127,13 @@ namespace OOP02
 
         // Abstract PrintShipment
         public abstract void PrintShipment();
-       
+
         #endregion
+
+        public Shipment CopyShipment()
+        {
+            return (Shipment)this.MemberwiseClone();
+        }
 
     }
 }

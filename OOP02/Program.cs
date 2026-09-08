@@ -557,176 +557,176 @@ namespace OOP02
             #endregion
 
             #region main oop04
-            // ==========================================
-            // Create Delivery Center
-            // ==========================================
+            //        // ==========================================
+            //        // Create Delivery Center
+            //        // ==========================================
 
-            DeliveryCenter center = new DeliveryCenter("Cairo Center");
-
-
-            // ==========================================
-            // a. Create StandardShipment
-            // ==========================================
-
-            StandardShipment standardShipment =
-                new StandardShipment(
-                    "SH001",
-                    "Laptop",
-                    3,
-                    80,
-                    new DeliveryAddress("Cairo", "Tahrir Street", 15)
-                );
+            //        DeliveryCenter center = new DeliveryCenter("Cairo Center");
 
 
-            // ==========================================
-            // b. Create ExpressShipment
-            // ==========================================
+            //        // ==========================================
+            //        // a. Create StandardShipment
+            //        // ==========================================
 
-            ExpressShipment expressShipment =
-                new ExpressShipment(
-                    "SH002",
-                    "Mobile Phone",
-                    2,
-                    60,
-                    new DeliveryAddress("Cairo", "Nasr Street", 20),
-                    30
-                );
-
-
-            // ==========================================
-            // c. Create InternationalShipment
-            // ==========================================
-
-            InternationalShipment internationalShipment =
-                new InternationalShipment(
-                    "SH003",
-                    "Television",
-                    8,
-                    120,
-                    new DeliveryAddress("Cairo", "Main Street", 10),
-                    "Germany",
-                    100
-                );
+            //        StandardShipment standardShipment =
+            //            new StandardShipment(
+            //                "SH001",
+            //                "Laptop",
+            //                3,
+            //                80,
+            //                new DeliveryAddress("Cairo", "Tahrir Street", 15)
+            //            );
 
 
-            // ==========================================
-            // d. Add all shipments to DeliveryCenter
-            // ==========================================
+            //        // ==========================================
+            //        // b. Create ExpressShipment
+            //        // ==========================================
 
-            center.AddShipment(standardShipment);
-            center.AddShipment(expressShipment);
-            center.AddShipment(internationalShipment);
-
-
-            // ==========================================
-            // e. Print all shipment details
-            // ==========================================
-
-            Console.WriteLine("==========================================");
-            Console.WriteLine("Delivery Center");
-            Console.WriteLine("==========================================");
-
-            center.PrintAllShipments();
+            //        ExpressShipment expressShipment =
+            //            new ExpressShipment(
+            //                "SH002",
+            //                "Mobile Phone",
+            //                2,
+            //                60,
+            //                new DeliveryAddress("Cairo", "Nasr Street", 20),
+            //                30
+            //            );
 
 
-            // ==========================================
-            // f. Print tracking status
-            // ==========================================
+            //        // ==========================================
+            //        // c. Create InternationalShipment
+            //        // ==========================================
 
-            Console.WriteLine("\n==========================================");
-            Console.WriteLine("Tracking Status");
-            Console.WriteLine("==========================================");
-
-            DeliveryReport.PrintShipment(standardShipment);
-            Console.WriteLine();
-
-            DeliveryReport.PrintShipment(expressShipment);
-            Console.WriteLine();
-
-            DeliveryReport.PrintShipment(internationalShipment);
-
-
-            // ==========================================
-            // g. Print insurance cost
-            // ==========================================
-
-            Console.WriteLine("\n==========================================");
-            Console.WriteLine("Insurance");
-            Console.WriteLine("==========================================");
-
-            Console.WriteLine(
-                $"Standard Shipment Insurance : " +
-                $"{standardShipment.CalculateInsurance():0.00} EGP"
-            );
-
-            Console.WriteLine();
-
-            Console.WriteLine(
-                $"Express Shipment Insurance : " +
-                $"{expressShipment.CalculateInsurance():0.00} EGP"
-            );
-
-            Console.WriteLine();
-
-            Console.WriteLine(
-                $"International Shipment Insurance : " +
-                $"{internationalShipment.CalculateInsurance():0.00} EGP"
-            );
+            //        InternationalShipment internationalShipment =
+            //            new InternationalShipment(
+            //                "SH003",
+            //                "Television",
+            //                8,
+            //                120,
+            //                new DeliveryAddress("Cairo", "Main Street", 10),
+            //                "Germany",
+            //                100
+            //            );
 
 
-            // ==========================================
-            // h. ITrackable[] array
-            // ==========================================
+            //        // ==========================================
+            //        // d. Add all shipments to DeliveryCenter
+            //        // ==========================================
 
-            ITrackable[] trackableShipments =
-            {
-        standardShipment,
-        expressShipment,
-        internationalShipment
-    };
-
-            Console.WriteLine("\n==========================================");
-            Console.WriteLine("ITrackable[]");
-            Console.WriteLine("==========================================");
-
-            foreach (ITrackable shipment in trackableShipments)
-            {
-                Console.WriteLine(shipment.GetTrackingStatus());
-            }
+            //        center.AddShipment(standardShipment);
+            //        center.AddShipment(expressShipment);
+            //        center.AddShipment(internationalShipment);
 
 
-            // ==========================================
-            // i. IInsurable[] array
-            // ==========================================
+            //        // ==========================================
+            //        // e. Print all shipment details
+            //        // ==========================================
 
-            IInsurable[] insurableShipments =
-            {
-        standardShipment,
-        expressShipment,
-        internationalShipment
-    };
+            //        Console.WriteLine("==========================================");
+            //        Console.WriteLine("Delivery Center");
+            //        Console.WriteLine("==========================================");
 
-            Console.WriteLine("\n==========================================");
-            Console.WriteLine("IInsurable[]");
-            Console.WriteLine("==========================================");
-
-            foreach (IInsurable shipment in insurableShipments)
-            {
-                Console.WriteLine(
-                    $"Insurance: {shipment.CalculateInsurance():0.00} EGP"
-                );
-            }
+            //        center.PrintAllShipments();
 
 
-            // ==========================================
-            // Interface Polymorphism
-            // ==========================================
+            //        // ==========================================
+            //        // f. Print tracking status
+            //        // ==========================================
 
-            Console.WriteLine("\n==========================================");
-            Console.WriteLine(
-                "Interface Polymorphism Demonstrated Successfully."
-            );
-            Console.WriteLine("==========================================");
+            //        Console.WriteLine("\n==========================================");
+            //        Console.WriteLine("Tracking Status");
+            //        Console.WriteLine("==========================================");
+
+            //        DeliveryReport.PrintShipment(standardShipment);
+            //        Console.WriteLine();
+
+            //        DeliveryReport.PrintShipment(expressShipment);
+            //        Console.WriteLine();
+
+            //        DeliveryReport.PrintShipment(internationalShipment);
+
+
+            //        // ==========================================
+            //        // g. Print insurance cost
+            //        // ==========================================
+
+            //        Console.WriteLine("\n==========================================");
+            //        Console.WriteLine("Insurance");
+            //        Console.WriteLine("==========================================");
+
+            //        Console.WriteLine(
+            //            $"Standard Shipment Insurance : " +
+            //            $"{standardShipment.CalculateInsurance():0.00} EGP"
+            //        );
+
+            //        Console.WriteLine();
+
+            //        Console.WriteLine(
+            //            $"Express Shipment Insurance : " +
+            //            $"{expressShipment.CalculateInsurance():0.00} EGP"
+            //        );
+
+            //        Console.WriteLine();
+
+            //        Console.WriteLine(
+            //            $"International Shipment Insurance : " +
+            //            $"{internationalShipment.CalculateInsurance():0.00} EGP"
+            //        );
+
+
+            //        // ==========================================
+            //        // h. ITrackable[] array
+            //        // ==========================================
+
+            //        ITrackable[] trackableShipments =
+            //        {
+            //    standardShipment,
+            //    expressShipment,
+            //    internationalShipment
+            //};
+
+            //        Console.WriteLine("\n==========================================");
+            //        Console.WriteLine("ITrackable[]");
+            //        Console.WriteLine("==========================================");
+
+            //        foreach (ITrackable shipment in trackableShipments)
+            //        {
+            //            Console.WriteLine(shipment.GetTrackingStatus());
+            //        }
+
+
+            //        // ==========================================
+            //        // i. IInsurable[] array
+            //        // ==========================================
+
+            //        IInsurable[] insurableShipments =
+            //        {
+            //    standardShipment,
+            //    expressShipment,
+            //    internationalShipment
+            //};
+
+            //        Console.WriteLine("\n==========================================");
+            //        Console.WriteLine("IInsurable[]");
+            //        Console.WriteLine("==========================================");
+
+            //        foreach (IInsurable shipment in insurableShipments)
+            //        {
+            //            Console.WriteLine(
+            //                $"Insurance: {shipment.CalculateInsurance():0.00} EGP"
+            //            );
+            //        }
+
+
+            //        // ==========================================
+            //        // Interface Polymorphism
+            //        // ==========================================
+
+            //        Console.WriteLine("\n==========================================");
+            //        Console.WriteLine(
+            //            "Interface Polymorphism Demonstrated Successfully."
+            //        );
+            //        Console.WriteLine("==========================================");
 
             #endregion
 
@@ -813,6 +813,24 @@ namespace OOP02
 
             //d) What happens if a declared partial method has no implementation?
             //The compiler automatically removes the method declaration and all calls to it during compilation, resulting in zero performance
+            #endregion
+
+            #region main oop05
+            //1 Object Copying
+            //Shipment shipment1 = new StandardShipment(
+            //    "SH001",
+            //    "Laptop",
+            //    3,
+            //    80,
+            //    new DeliveryAddress("Cairo", "Tahrir Street", 15)
+            //);
+
+            //Shipment shipment2 = shipment1;
+            //shipment2.PrintShipment();
+        
+            //shipment2 = shipment1.CopyShipment();
+            //shipment2.PrintShipment();
+            //------------------------------------
             #endregion
 
 
