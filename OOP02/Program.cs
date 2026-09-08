@@ -919,6 +919,41 @@ namespace OOP02
 
             //Console.WriteLine("Creating Shipments---");
             //DeliveryUtilities.PrintSeparator();
+            //--------------------------------------
+
+            //Q8 — Extension Methods
+
+            //            StandardShipment standardShipment = new StandardShipment(
+            //    "SH001",
+            //    "Laptop",
+            //    3,
+            //    80,
+            //    new DeliveryAddress("Cairo", "Tahrir Street", 15)
+            //);
+
+            //            ExpressShipment expressShipment = new ExpressShipment(
+            //    "SH002",
+            //    "Laptop",
+            //    3,
+            //    80,
+            //    new DeliveryAddress("Cairo", "Tahrir Street", 15),22
+            //);
+
+            //            InternationalShipment internationalShipment = new InternationalShipment(
+            //    "SH003",
+            //    "Laptop",
+            //    3,
+            //    80,
+            //    new DeliveryAddress("Cairo", "Tahrir Street", 15),"mooo",33
+            //);
+
+
+            //            Console.WriteLine(standardShipment.GetSummary());
+            //            Console.WriteLine(expressShipment.GetSummary());
+            //            Console.WriteLine(internationalShipment.GetSummary());
+            //            Console.WriteLine($"SH001 Is Delivered : {standardShipment.IsDelivered()}");
+            //            Console.WriteLine($"SH002 Is Delivered : {expressShipment.IsDelivered()}");
+            //            Console.WriteLine($"SH003 Is Delivered : {internationalShipment.IsDelivered()}");
             #endregion
 
 
