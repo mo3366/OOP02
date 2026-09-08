@@ -5,7 +5,7 @@ using System.Text;
 namespace OOP02
 {
     #region 1. Create a DeliveryAddress struct 
-    public struct DeliveryAddress
+    public class DeliveryAddress
     {
         public string City;
         public string Street;

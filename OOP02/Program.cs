@@ -827,10 +827,47 @@ namespace OOP02
 
             //Shipment shipment2 = shipment1;
             //shipment2.PrintShipment();
-        
+
             //shipment2 = shipment1.CopyShipment();
             //shipment2.PrintShipment();
             //------------------------------------
+
+            //2 Shallow Copy
+
+            //            StandardShipment standardShipment = new StandardShipment(
+            //    "SH001",
+            //    "Laptop",
+            //    3,
+            //    80,
+            //    new DeliveryAddress("Cairo", "Tahrir Street", 15)
+            //);
+            //            Shipment shallowCopy = standardShipment.ShallowCopy();
+
+            //            Console.WriteLine(
+            //                $"Original Shipment Address : {standardShipment.Destination.City}"
+            //            );
+
+            //            Console.WriteLine(
+            //                $"Copied Shipment Address : {shallowCopy.Destination.City}"
+            //            );
+
+            //            Console.WriteLine("Changing copied shipment address...");
+
+            //            shallowCopy.Destination.City = "Giza";
+
+            //            Console.WriteLine(
+            //                $"Original Shipment Address : {standardShipment.Destination.City}"
+            //            );
+
+            //            Console.WriteLine(
+            //                $"Copied Shipment Address : {shallowCopy.Destination.City}"
+            //            );
+
+            //            Console.WriteLine(
+            //                $"Same DeliveryAddress Object : " +
+            //                $"{ReferenceEquals(standardShipment.Destination, shallowCopy.Destination)}"
+            //            );
+
             #endregion
 
 
