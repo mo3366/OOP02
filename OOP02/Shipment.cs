@@ -5,13 +5,14 @@ using System.Text;
 
 namespace OOP02
 {
-    internal  abstract class Shipment
+    internal abstract partial class Shipment
     {
         #region 2.Ceate Shipment 
         private string trackingCode;
         private string description;
         private decimal weight;
         private decimal deliveryFee;
+        private static int TotalShipmentsCreated;
 
         // Abstract EstimatedCost
         public abstract decimal EstimatedCost { get; }
@@ -28,6 +29,7 @@ namespace OOP02
             Weight = weight;
             DeliveryFee = deliveryFee;
             Destination = destination;
+            TotalShipmentsCreated++;
         }
 
         public DeliveryAddress Destination { get; set; }
@@ -91,10 +93,11 @@ namespace OOP02
             this.Weight = 1;
             this.DeliveryFee = 50;
             this.Destination = new DeliveryAddress("Cairo", "Unknown Street", 1);
+            TotalShipmentsCreated++;
 
         }
 
-     
+
         #endregion
 
 
@@ -119,7 +122,7 @@ namespace OOP02
 
         public void UpdateWeight(decimal newWeight, decimal packingWeight)
         {
-            if (newWeight > 0 && packingWeight > 0)
+            if (newWeight > 0 && packingWeight >= 0)
             {
                 Weight = newWeight + packingWeight;
             }
@@ -127,8 +130,51 @@ namespace OOP02
 
         // Abstract PrintShipment
         public abstract void PrintShipment();
-       
+
         #endregion
 
+        public Shipment CopyShipment()
+        {
+            return (Shipment)this.MemberwiseClone();
+        }
+
+        public Shipment ShallowCopy()
+        {
+            return (Shipment)this.MemberwiseClone();
+        }
+
+
+        //deep copy
+        public Shipment DeepCopy()
+        {
+            Shipment result = (Shipment)this.MemberwiseClone();
+
+            result.Destination = new DeliveryAddress(
+                Destination.City,
+                Destination.Street,
+                Destination.BuildingNumber
+            );
+
+            return result;
+        }
+
+       //static constractor
+      static Shipment()
+        {
+            TotalShipmentsCreated = 0;
+            Console.WriteLine("Shipment System Initialized");
+
+        }
+        //Static Method
+        public static int GetTotalShipmentsCreated()
+        {
+            return TotalShipmentsCreated;
+        }
+
+        //partial method
+        partial void OnTrackingStatusChanged(string newStatus)
+        {
+            Console.WriteLine($"Tracking status changed to: {newStatus}");
+        }
     }
 }
